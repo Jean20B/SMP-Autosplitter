@@ -52,18 +52,10 @@ start {
 }
 
 split {
-	if (settings["level2"] && vars.ls2) {
-		return true;
-	}
-	if (settings["level3"] && vars.ls3) {
-		return true;
-	}
-	if (settings["level4"] && vars.ls4) {
-		return true;
-	}
-	if (settings["level5"] && vars.ls5) {
-		return true;
-	}
+	return (settings["level2"] && vars.ls2)
+		|| (settings["level3"] && vars.ls3)
+		|| (settings["level4"] && vars.ls4)
+		|| (settings["level5"] && vars.ls5);
 }
 
 reset {
