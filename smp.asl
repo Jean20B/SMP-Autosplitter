@@ -3,7 +3,6 @@
 
 state("smp") {
 	string255 levelstate: 0x2801E; //String of the loaded stage or menu
-	byte endbyte: 0x2787C; //A byte that changes when you hit an interrogation block to end a level (Hit = 0 (00),  Not hit = 255 (FF))
 }
 
 startup {
@@ -31,7 +30,7 @@ update {
 	//Level 5 is "Untitled"
 	vars.ls5 = (old.levelstate == "Level 5 Intro" && current.levelstate == "Untitled");
 	
-	vars.end = (current.levelstate == "Untitled" && old.endbyte == 255 && current.endbyte == 0);
+	vars.end = (old.levelstate == "Untitled" && current.levelstate == "Ending");
 }
 
 start {
