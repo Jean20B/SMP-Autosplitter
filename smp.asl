@@ -1,5 +1,4 @@
 //Super Mario Pandemonium - Any%
-//You can uncheck levels in Livesplit layout settings but it's not really useful
 
 state("smp") {
 	string255 levelstate: 0x2801E; //String of the loaded stage or menu
