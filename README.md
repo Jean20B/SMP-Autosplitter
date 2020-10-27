@@ -8,6 +8,7 @@ This LiveSplit autosplitter for Super Mario Pandemonium has 3 features:
 
 * [Super Mario Pandemonium](https://mfgg.net/index.php?act=resdb&param=02&c=2&id=301)
 * [LiveSplit](https://livesplit.org/)
+* [Speedrun.com - SMP](https://www.speedrun.com/smp)
 
 ## How to activate the autosplitter
 Open **LiveSplit** -> **Edit Splits...** -> Set the **game name** (Super Mario Pandemonium) -> Press **Activate**
