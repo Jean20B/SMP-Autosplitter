@@ -63,7 +63,6 @@ update {
 	vars.end = (old.levelstate == "Untitled" && current.levelstate == "Ending");
 	
 	//Prevent to split again once it's done
-	//There may be a better way to do that?
 	if (vars.ls2done) {vars.ls2 = false;}
 	if (vars.ls2) {vars.ls2done = true;}
 	
