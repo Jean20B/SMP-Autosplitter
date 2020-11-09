@@ -23,5 +23,5 @@ So I use this text to know when a new level is loaded.
 However there are loading times (~ 1-3 seconds), and the timer can start or split before it's done loading, so I use the camera position to know when it's done loading.
 
 Addresses:
-* Horizontal position: `0x27828` (`ushort`)
-* Vertical position: `0x2782A` (`ushort`)
+* Horizontal position: `0x27828` (`ushort`) (starts at 0 for each level)
+* Vertical position: `0x2782A` (`ushort`) (starts at 800 for each level)
