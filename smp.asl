@@ -28,7 +28,7 @@ startup {
 
 update {
 	//Boolean for the starting position of the camera
-	vars.camstart = ((current.camX == 0) && (current.camY == 800));
+	vars.camstart = ((old.camX == 0) && (old.camY == 0) && (current.camX == 0) && (current.camY == 800));
 	
 	//Booleans using levelstate and camstart, to check if a new stage is loaded
 	
@@ -55,25 +55,33 @@ update {
 	}
 	
 	vars.ls1 = (vars.ls1check && vars.camstart);
-	vars.ls2 = (vars.ls2check && vars.camstart);
-	vars.ls3 = (vars.ls3check && vars.camstart);
-	vars.ls4 = (vars.ls4check && vars.camstart);
-	vars.ls5 = (vars.ls5check && vars.camstart);
+	
+	//lsXdone prevents to split again after it's done
+	if (vars.ls2check && vars.camstart && !vars.ls2done) {
+		vars.ls2 = true;
+		vars.ls2done = true;
+	}
+	else vars.ls2 = false;
+	
+	if (vars.ls3check && vars.camstart && !vars.ls3done) {
+		vars.ls3 = true;
+		vars.ls3done = true;
+	}
+	else vars.ls3 = false;
+	
+	if (vars.ls4check && vars.camstart && !vars.ls4done) {
+		vars.ls4 = true;
+		vars.ls4done = true;
+	}
+	else vars.ls4 = false;
+	
+	if (vars.ls5check && vars.camstart && !vars.ls5done) {
+		vars.ls5 = true;
+		vars.ls5done = true;
+	}
+	else vars.ls5 = false;
 	
 	vars.end = (old.levelstate == "Untitled" && current.levelstate == "Ending");
-	
-	//Prevent to split again once it's done
-	if (vars.ls2done) {vars.ls2 = false;}
-	if (vars.ls2) {vars.ls2done = true;}
-	
-	if (vars.ls3done) {vars.ls3 = false;}
-	if (vars.ls3) {vars.ls3done = true;}
-	
-	if (vars.ls4done) {vars.ls4 = false;}
-	if (vars.ls4) {vars.ls4done = true;}
-	
-	if (vars.ls5done) {vars.ls5 = false;}
-	if (vars.ls5) {vars.ls5done = true;}
 }
 
 start {
