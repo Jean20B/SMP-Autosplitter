@@ -1,27 +1,19 @@
-# Super Mario Pandemonium - LiveSplit Autosplitter
-This LiveSplit autosplitter for Super Mario Pandemonium has 3 features:
-* Starts automatically the timer when the first level is loaded
-* Splits when a new level is loaded (and when the ending is loaded)
-* Resets when you are on the main menu
-
-Note: levels in settings can't be disabled
+# Super Mario Pandemonium / Super Mario: Mushroom Chaos - LiveSplit Autosplitter
 
 ## Links
 
-* [Super Mario Pandemonium](https://mfgg.net/index.php?act=resdb&param=02&c=2&id=301)
+### LiveSplit
 * [LiveSplit](https://livesplit.org/)
+
+### MFGG
+* [Super Mario Pandemonium](https://mfgg.net/index.php?act=resdb&param=02&c=2&id=301)
+* [Super Mario: Mushroom Chaos](https://mfgg.net/index.php?act=resdb&param=02&c=2&id=548)
+
+### Speedrun.com
 * [Speedrun.com - SMP](https://www.speedrun.com/smp)
+* [Speedrun.com - SMMC](https://www.speedrun.com/smmc)
 
 ## How to activate the autosplitter
-Open **LiveSplit** -> **Edit Splits...** -> Set the **game name** (Super Mario Pandemonium) -> Press **Activate**
+Open **LiveSplit** -> **Edit Splits...** -> Set the **game name** (Super Mario Pandemonium or Super Mario: Mushroom Chaos) -> Press **Activate**
 
-## How does the script work?
-There is an address in the game (`0x2801E`) where a text (a `string`) is located, and this text gives the title of the level or menu that is currently loaded.
-
-So I use this text to know when a new level is loaded.
-
-However there are loading times (~ 1-3 seconds), and the timer can start or split before it's done loading, so I use the camera position to know when it's done loading.
-
-Addresses:
-* Horizontal position: `0x27828` (`ushort`) (starts at 0 for each level)
-* Vertical position: `0x2782A` (`ushort`) (starts at 800 for each level)
+## [Wiki](https://github.com/Jean20B/SMP-Autosplitter/wiki)
