@@ -108,5 +108,18 @@ split {
 }
 
 reset {
-	return (current.levelstate == "Nightchaser Games");
+	if (current.levelstate == "Nightchaser Games") {
+		vars.ls2check = false;
+		vars.ls3check = false;
+		vars.ls4check = false;
+		vars.ls5check = false;
+		vars.ls6check = false;
+		vars.ls2done = false;
+		vars.ls3done = false;
+		vars.ls4done = false;
+		vars.ls5done = false;
+		vars.ls6done = false;
+		return true;
+	}
+	else return false;
 }

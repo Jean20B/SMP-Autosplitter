@@ -93,5 +93,17 @@ split {
 }
 
 reset {
-	return (current.levelstate == "Title Screen");
+	if (current.levelstate == "Title Screen") {
+		vars.ls1check = false;
+		vars.ls2check = false;
+		vars.ls3check = false;
+		vars.ls4check = false;
+		vars.ls5check = false;
+		vars.ls2done = false;
+		vars.ls3done = false;
+		vars.ls4done = false;
+		vars.ls5done = false;
+		return true;
+	}
+	else return false;
 }
